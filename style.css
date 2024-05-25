@@ -8,9 +8,6 @@
 a {
   color: white;
   text-decoration: none;
-  margin: 3vw;
-
-  /* border-radius: 14%; */
 }
 
 html,
@@ -25,18 +22,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 25px;
 }
 
 .navbar a:hover {
   opacity: 0.7;
 }
 
-@media (max-width: 500px) {
-  .navbar a {
-    opacity: 0;
-  }
-  .arrow {
-    opacity: 1;
-  }
+#sidebar li:hover {
+  background-color: #1c1a1a;
+}
+
+#nav {
+  display: flex;
+  list-style: none;
+  gap: 6vw;
+}
+
+#sidebar {
+  background-color: rgb(18, 17, 17);
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 250px;
+  right: 0;
+  /* opacity: 0; */
+  list-style: none;
+}
+
+#menu {
+  padding: 20px;
+  padding-bottom: 7px;
+}
+
+#sidebar li {
+  width: 100%;
+  justify-content: center;
+  padding: 20px 20px;
 }
