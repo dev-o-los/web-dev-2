@@ -57,6 +57,7 @@ body {
   padding-left: 20px;
   padding-top: 50px;
   display: flex;
+
   flex-direction: column;
   p {
     padding-top: 20px;
@@ -65,7 +66,7 @@ body {
   .logos {
     padding-top: 50px;
     justify-content: space-around;
-    display: flex;
+    /* display: flex; */
   }
 
   img {
@@ -94,9 +95,10 @@ body {
       max-width: 50%;
     }
     .logos {
-      width: 50%;
-      display: flex;
+      width: calc(50% - 20px);
       padding-top: 0px;
+      max-width: fit-content;
+      margin-inline: auto;
     }
 
     img {
