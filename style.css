@@ -6,9 +6,10 @@
   box-sizing: border-box;
 }
 
-a {
-  color: rgb(255, 255, 170);
-  text-decoration: none;
+h1 {
+  font-size: 5vmax;
+  opacity: 0.5;
+  padding-bottom: 30px;
 }
 
 html,
@@ -44,13 +45,6 @@ body {
 
   .aboutme-txt {
     padding: 20px 20px;
-
-    h1 {
-      font-size: 5vmax;
-      opacity: 0.5;
-      padding-bottom: 30px;
-    }
-
     p {
       font-weight: 200;
     }
@@ -61,9 +55,9 @@ body {
   .aboutme {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     flex-direction: row;
-    gap: 30vw;
+    gap: 20vw;
     padding-left: 5vw;
   }
 }
