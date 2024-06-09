@@ -11,6 +11,10 @@ h1 {
   opacity: 0.5;
   padding-bottom: 30px;
 }
+h2,
+h3 {
+  opacity: 0.7;
+}
 
 p {
   font-weight: 200;
@@ -66,13 +70,25 @@ body {
   .logos {
     padding-top: 50px;
     justify-content: space-around;
-    /* display: flex; */
   }
 
   img {
     width: 30vw;
     max-width: 250px;
     object-fit: cover;
+  }
+}
+
+.projects {
+  padding-top: 200px;
+  padding-left: 20px;
+  .pro-1,
+  .pro-2 {
+    gap: 20px;
+    padding: 50px 0;
+    border-bottom: 2px solid grey;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -94,6 +110,7 @@ body {
     .exp-txt {
       max-width: 50%;
     }
+
     .logos {
       width: calc(50% - 20px);
       padding-top: 0px;
