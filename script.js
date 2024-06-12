@@ -12,4 +12,4 @@ function circleMouseFollower() {
   });
 }
 
-circleMouseFollower();
+// circleMouseFollower();
