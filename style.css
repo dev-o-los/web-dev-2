@@ -59,6 +59,9 @@ body {
   .pfp {
     max-width: fit-content;
     margin-inline: auto;
+    i {
+      display: none;
+    }
   }
   img {
     height: 300px;
@@ -145,6 +148,24 @@ body {
     flex-direction: row;
     gap: 20vw;
     padding-left: 5vw;
+
+    .pfp {
+      align-items: center;
+      display: flex;
+      gap: 40px;
+
+      i {
+        display: block;
+        border-radius: 50%;
+        justify-content: space-between;
+        padding: 10px 10px;
+        background-color: rgb(37, 37, 37);
+      }
+
+      i:hover {
+        opacity: 0.5;
+      }
+    }
   }
 
   .experience {
