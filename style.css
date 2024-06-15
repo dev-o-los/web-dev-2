@@ -48,9 +48,17 @@ body {
   padding-top: 20px;
   font-family: "Sacramento", cursive;
   font-size: 8.5vmax;
-  display: flex;
-  justify-content: center;
   font-weight: 500;
+}
+
+.bounding {
+  max-width: fit-content;
+  margin-inline: auto;
+  overflow: hidden;
+
+  .boundingelem {
+    transform: translateY(100%);
+  }
 }
 
 .aboutme {
