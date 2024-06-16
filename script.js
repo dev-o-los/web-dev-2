@@ -23,6 +23,19 @@ function circleMouseFollower() {
   });
 }
 
-animateAppBar();
+document.querySelectorAll(".pro").forEach(function (el) {
+  el.addEventListener("mousemove", function (dets) {
+    console.log("el :>> ", el.getBoundingClientRect().top);
+    console.log("dets.clientY :>> ", dets.clientY);
+    var diff = dets.pageY - el.getBoundingClientRect().top;
+    gsap.to(el.querySelector("img"), {
+      opacity: 1,
+      ease: Power1,
+      bottom: diff,
+      // left: dets.clientX,
+    });
+  });
+});
 
+animateAppBar();
 // circleMouseFollower();
