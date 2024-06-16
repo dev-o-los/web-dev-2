@@ -52,6 +52,5 @@ function imageShow() {
 }
 
 imageShow();
-
 animateAppBar();
 // circleMouseFollower();
