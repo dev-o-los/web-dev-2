@@ -19,23 +19,39 @@ function circleMouseFollower() {
     this.document.querySelector(
       "#circle-follower"
     ).style.transform = `translate(${dets.pageX}px , ${dets.pageY}px)`;
-    console.log(this.document.querySelector("#circle-follower"));
+  });
+}
+function imageShow() {
+  document.querySelectorAll(".pro").forEach(function (el) {
+    el.addEventListener("mouseleave", function (dets) {
+      gsap.to(el.querySelector("img"), {
+        opacity: 0,
+        ease: Power3,
+      });
+    });
+  });
+
+  document.querySelectorAll(".pro").forEach(function (el) {
+    var rot = 0,
+      diffrot = 0;
+
+    el.addEventListener("mousemove", function (dets) {
+      var diff = dets.clientY - el.getBoundingClientRect().top - 110;
+      diffrot = dets.clientX - rot;
+      rot = dets.clientX;
+      gsap.to(el.querySelector("img"), {
+        opacity: 1,
+        ease: Power3,
+        top: diff,
+        bottom: 0,
+        left: dets.clientX - 170,
+        rotate: gsap.utils.clamp(-90, 90, diffrot),
+      });
+    });
   });
 }
 
-document.querySelectorAll(".pro").forEach(function (el) {
-  el.addEventListener("mousemove", function (dets) {
-    console.log("el :>> ", el.getBoundingClientRect().top);
-    console.log("dets.clientY :>> ", dets.clientY);
-    var diff = dets.pageY - el.getBoundingClientRect().top;
-    gsap.to(el.querySelector("img"), {
-      opacity: 1,
-      ease: Power1,
-      bottom: diff,
-      // left: dets.clientX,
-    });
-  });
-});
+imageShow();
 
 animateAppBar();
 // circleMouseFollower();
