@@ -23,22 +23,6 @@ function circleMouseFollower() {
 }
 function imageShow() {
   document.querySelectorAll(".pro").forEach(function (el) {
-    el.addEventListener("mouseleave", function () {
-      if (el.querySelector(".view") != null) {
-        gsap.to(el.querySelector(".view"), {
-          opacity: 0,
-          ease: Power3,
-        });
-      } else {
-        gsap.to(el.querySelector("img"), {
-          opacity: 0,
-          ease: Power3,
-        });
-      }
-    });
-  });
-
-  document.querySelectorAll(".pro").forEach(function (el) {
     var rot = 0;
     var diffrot = 0;
 
@@ -46,9 +30,6 @@ function imageShow() {
       var diff = dets.clientY - el.getBoundingClientRect().top - 150;
       diffrot = dets.clientX - rot;
       rot = dets.clientX;
-
-      console.log(el.querySelector(".view") != null);
-      console.log(el.querySelector(".view"));
 
       if (el.querySelector(".view") != null) {
         gsap.to(el.querySelector(".view"), {
@@ -60,6 +41,22 @@ function imageShow() {
         });
       } else {
         gsapanimate("img", el, diff, dets, diffrot);
+      }
+    });
+  });
+
+  document.querySelectorAll(".pro").forEach(function (el) {
+    el.addEventListener("mouseleave", function () {
+      if (el.querySelector(".view") != null) {
+        gsap.to(el.querySelector(".view"), {
+          opacity: 0,
+          ease: Power3,
+        });
+      } else {
+        gsap.to(el.querySelector("img"), {
+          opacity: 0,
+          ease: Power3,
+        });
       }
     });
   });

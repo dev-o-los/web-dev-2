@@ -119,7 +119,6 @@ body {
     border-bottom: 2px solid grey;
     display: flex;
     align-items: center;
-    gap: 50px;
     .leading {
       gap: 30px;
       display: flex;
