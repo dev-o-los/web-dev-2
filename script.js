@@ -23,34 +23,58 @@ function circleMouseFollower() {
 }
 function imageShow() {
   document.querySelectorAll(".pro").forEach(function (el) {
-    el.addEventListener("mouseleave", function (dets) {
-      gsap.to(el.querySelector("img"), {
-        opacity: 0,
-        ease: Power3,
-      });
+    el.addEventListener("mouseleave", function () {
+      if (el.querySelector(".view") != null) {
+        gsap.to(el.querySelector(".view"), {
+          opacity: 0,
+          ease: Power3,
+        });
+      } else {
+        gsap.to(el.querySelector("img"), {
+          opacity: 0,
+          ease: Power3,
+        });
+      }
     });
   });
 
   document.querySelectorAll(".pro").forEach(function (el) {
-    var rot = 0,
-      diffrot = 0;
+    var rot = 0;
+    var diffrot = 0;
 
     el.addEventListener("mousemove", function (dets) {
-      var diff = dets.clientY - el.getBoundingClientRect().top - 110;
+      var diff = dets.clientY - el.getBoundingClientRect().top - 150;
       diffrot = dets.clientX - rot;
       rot = dets.clientX;
-      gsap.to(el.querySelector("img"), {
-        opacity: 1,
-        ease: Power3,
-        top: diff,
-        bottom: 0,
-        left: dets.clientX - 170,
-        rotate: gsap.utils.clamp(-90, 90, diffrot),
-      });
+
+      console.log(el.querySelector(".view") != null);
+      console.log(el.querySelector(".view"));
+
+      if (el.querySelector(".view") != null) {
+        gsap.to(el.querySelector(".view"), {
+          opacity: 1,
+          ease: Power3,
+          top: diff + 130,
+          left: dets.clientX - 45,
+          rotate: gsap.utils.clamp(-20, 20, diffrot * 0.8),
+        });
+      } else {
+        gsapanimate("img", el, diff, dets, diffrot);
+      }
     });
   });
 }
 
 imageShow();
 animateAppBar();
-// circleMouseFollower();
+circleMouseFollower();
+
+function gsapanimate(selectorname, el, diff, dets, diffrot) {
+  gsap.to(el.querySelector(selectorname), {
+    opacity: 1,
+    ease: Power3,
+    top: diff,
+    left: dets.clientX - 190,
+    rotate: gsap.utils.clamp(-20, 20, diffrot * 0.8),
+  });
+}

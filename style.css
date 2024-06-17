@@ -132,9 +132,29 @@ body {
     img {
       pointer-events: none;
       opacity: 0;
-      height: 250%;
+      height: 300px;
+      width: 350px;
       position: absolute;
+      object-fit: cover;
       z-index: 999;
+    }
+
+    .view {
+      opacity: 0;
+      z-index: 999;
+      position: absolute;
+      background-color: white;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      p {
+        font-size: 12px;
+        font-weight: 400;
+      }
+      color: black;
     }
   }
 }
