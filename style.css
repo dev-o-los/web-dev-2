@@ -239,3 +239,50 @@ body {
     justify-content: space-between;
   }
 }
+
+/* ------------------------------ ONEBOX ------------------------------------ */
+
+.onbx {
+  padding: 10px;
+  padding-left: 20px;
+  h1 {
+    font-size: 17dvi;
+    text-transform: uppercase;
+    line-height: 0.9;
+    padding-bottom: 0;
+  }
+
+  .first-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .appicon {
+      padding-right: 10px;
+    }
+    img {
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .manage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    p {
+      padding-right: 20px;
+    }
+  }
+}
+
+@media (min-width: 670px) {
+  .onbx {
+    h1 {
+      font-size: 120px;
+    }
+  }
+}
