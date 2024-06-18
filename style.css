@@ -288,6 +288,19 @@ body {
   }
 }
 
+.images {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-top: 20px;
+
+  scroll-behavior: smooth;
+  img {
+    width: 250px;
+    margin-inline: auto;
+  }
+}
+
 @media (min-width: 670px) {
   .onbx {
     h1 {
