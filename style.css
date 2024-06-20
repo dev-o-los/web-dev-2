@@ -288,16 +288,24 @@ body {
   }
 }
 
-.images {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-top: 20px;
+.img-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  overflow: hidden;
+  .images {
+    display: flex;
+    animation: slide 10s infinite;
+    animation-direction: a;
+    img {
+      width: 221px;
+    }
+  }
+}
 
-  scroll-behavior: smooth;
-  img {
-    width: 250px;
-    margin-inline: auto;
+@keyframes slide {
+  50% {
+    transform: translateX(-70dvw);
   }
 }
 
