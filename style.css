@@ -295,7 +295,7 @@ body {
   overflow: hidden;
   .images {
     display: flex;
-    animation: slide 10s infinite;
+    /* animation: slide 10s infinite; */
     animation-direction: a;
     img {
       width: 221px;
