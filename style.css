@@ -243,8 +243,9 @@ body {
 /* ------------------------------ ONEBOX ------------------------------------ */
 
 .onbx {
-  padding: 10px;
-  padding-left: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   h1 {
     font-size: 17dvi;
     text-transform: uppercase;
@@ -259,14 +260,11 @@ body {
   }
 
   .boundingelem {
-    width: 100dvw;
+    width: calc(100dvw - 7vw);
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    .appicon {
-      padding-right: 50px;
-    }
     img {
       height: 30px;
       width: 30px;
@@ -281,10 +279,6 @@ body {
     justify-content: space-between;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
-
-    p {
-      padding-right: 50px;
-    }
   }
 }
 
@@ -303,11 +297,8 @@ body {
   }
 }
 
-.row1-wrapper {
-  display: block;
-  .btns {
-    display: block;
-  }
+.btns {
+  padding-top: 20px;
 }
 
 button {
@@ -315,6 +306,7 @@ button {
   background-color: transparent;
   color: white;
   height: 60px;
+  width: 100%;
   padding: 20px 100px;
   border-radius: 30px;
   border-color: rgb(155, 151, 151);
@@ -346,15 +338,18 @@ button:hover {
       font-size: 120px;
     }
   }
+  button {
+    width: 60%;
+  }
 }
 
 @media (min-width: 1080px) {
   .row1-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     .row1 {
-      width: 700px;
+      width: 60%;
     }
     button {
       width: 30dvi;
