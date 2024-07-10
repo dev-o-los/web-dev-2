@@ -260,7 +260,7 @@ body {
   }
 
   .boundingelem {
-    width: calc(100dvw - 7vw);
+    width: calc(100dvw - 10vw);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -283,14 +283,10 @@ body {
 }
 
 .img-container {
-  width: 500px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 10px;
+  display: flex;
+  margin: 40px 0px;
+  justify-content: center;
   .images {
-    display: flex;
-    /* animation: slide 10s infinite; */
-    animation-direction: a;
     img {
       width: 221px;
     }
@@ -325,18 +321,15 @@ button:hover {
   color: black;
 }
 
-@keyframes slide {
-  50% {
-    transform: translateX(-70dvw);
-  }
-}
-
 /* desktop */
 @media (min-width: 670px) {
   .onbx {
     h1 {
       font-size: 120px;
     }
+  }
+  .btns {
+    display: flex;
   }
   button {
     width: 60%;
@@ -357,6 +350,11 @@ button:hover {
 
     .btns {
       padding-left: 2dvi;
+      display: inline;
     }
+  }
+
+  .images {
+    display: flex;
   }
 }
