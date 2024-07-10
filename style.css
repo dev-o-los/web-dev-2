@@ -283,10 +283,10 @@ body {
 }
 
 .img-container {
-  display: flex;
   margin: 40px 0px;
-  justify-content: center;
   .images {
+    max-width: fit-content;
+    margin-inline: auto;
     img {
       width: 221px;
     }
@@ -330,9 +330,10 @@ button:hover {
   }
   .btns {
     display: flex;
-  }
-  button {
-    width: 60%;
+    gap: 20px;
+    button {
+      width: 45dvw;
+    }
   }
 }
 
@@ -352,9 +353,47 @@ button:hover {
       padding-left: 2dvi;
       display: inline;
     }
+
+    .img-container {
+      background-color: red;
+      .images {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 
-  .images {
-    display: flex;
+  .imgno:nth-child(2n) {
+    padding-top: 100px;
+    color: red;
+    animation: moveup 5s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+    position: relative;
+  }
+  .imgno:nth-child(2n + 1) {
+    padding-top: 100px;
+    color: red;
+    animation: movedown 5s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+    position: relative;
+  }
+}
+
+@keyframes moveup {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 50px;
+  }
+}
+
+@keyframes movedown {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: -50px;
   }
 }

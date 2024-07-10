@@ -15,4 +15,9 @@ function animateAppBar() {
   });
 }
 
+function scrolltoview() {
+  let div = document.getElementById("test");
+  div.scrollIntoView();
+}
+
 animateAppBar();
