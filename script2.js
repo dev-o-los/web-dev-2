@@ -1,11 +1,10 @@
-// const scroll = new LocomotiveScroll({
-//   el: document.querySelector(".onbx"),
-//   smooth: true,
-// });
+const scroll = new LocomotiveScroll({
+  el: document.querySelector(".onbx"),
+  smooth: true,
+});
 
+var tl = gsap.timeline();
 function animateAppBar() {
-  var tl = gsap.timeline();
-
   tl.from(".bounding", {
     opacity: 0,
     ease: Expo.easeInOut,
