@@ -285,10 +285,11 @@ body {
 .img-container {
   margin: 40px 0px;
   .images {
+    display: grid;
     max-width: fit-content;
     margin-inline: auto;
     img {
-      width: 221px;
+      width: 260px;
     }
   }
 }
@@ -335,6 +336,12 @@ button:hover {
       width: 45dvw;
     }
   }
+  .img-container {
+    .images {
+      display: flex;
+      overflow: hidden;
+    }
+  }
 }
 
 @media (min-width: 1080px) {
@@ -357,9 +364,7 @@ button:hover {
     .img-container {
       background-color: red;
       .images {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: wrap;
       }
     }
   }
