@@ -290,6 +290,7 @@ body {
   margin: 40px 0px;
   .images {
     display: grid;
+    grid-template-columns: minmax(2, 1);
     max-width: fit-content;
     margin-inline: auto;
     img {
@@ -364,8 +365,11 @@ button:hover {
   }
   .img-container {
     .images {
-      display: block;
-      overflow: hidden;
+      max-width: fit-content;
+      margin: auto;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -390,12 +394,10 @@ button:hover {
       padding-left: 2dvi;
       display: inline;
     }
-
-    .img-container {
-      background-color: red;
-      .images {
-        display: wrap;
-      }
+  }
+  .img-container {
+    .images {
+      display: flex;
     }
   }
 
