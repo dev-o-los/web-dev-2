@@ -434,3 +434,20 @@ button:hover {
     bottom: -50px;
   }
 }
+
+/* -------------------------ACEXPENSE---------------------------- */
+
+.first-line-ace {
+  h1 {
+    opacity: 0.8;
+    font-size: 13dvi;
+  }
+}
+
+@media (min-width: 877px) {
+  .first-line-ace {
+    h1 {
+      font-size: 120px;
+    }
+  }
+}
