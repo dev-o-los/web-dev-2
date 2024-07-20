@@ -463,3 +463,15 @@ button:hover {
     }
   }
 }
+
+/* -----------------------ANIME X-------------------------- */
+.first-line-anime {
+  h1 {
+    opacity: 0.8;
+  }
+  .appicon img {
+    height: 40px;
+    width: 40px;
+    filter: invert();
+  }
+}
