@@ -52,11 +52,13 @@ body {
   font-weight: 500;
 }
 
-.bounding {
+.appbar .bounding {
   max-width: fit-content;
   margin-inline: auto;
-  overflow: hidden;
+}
 
+.bounding {
+  overflow: hidden;
   .boundingelem {
     transform: translateY(100%);
   }
@@ -264,7 +266,7 @@ body {
   }
 
   .boundingelem {
-    width: calc(100dvw - 10vw);
+    width: calc(100dvw - 5vw);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -301,6 +303,8 @@ body {
 
 .btns {
   padding-top: 20px;
+  max-width: fit-content;
+  margin-inline: auto;
 }
 
 button {
