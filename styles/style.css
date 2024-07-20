@@ -299,6 +299,11 @@ body {
       width: 260px;
     }
   }
+
+  .ace-images .images img {
+    margin: 15px;
+    border-radius: 20px;
+  }
 }
 
 .btns {
@@ -400,19 +405,22 @@ button:hover {
     }
   }
   .img-container {
+    padding-top: 100px;
     .images {
       display: flex;
+    }
+
+    .ace-images .images img {
+      border-radius: 20px;
     }
   }
 
   .imgno:nth-child(2n) {
-    padding-top: 100px;
     color: red;
     animation: moveup 5s cubic-bezier(0.19, 1, 0.22, 1) infinite;
     position: relative;
   }
   .imgno:nth-child(2n + 1) {
-    padding-top: 100px;
     color: red;
     animation: movedown 5s cubic-bezier(0.19, 1, 0.22, 1) infinite;
     position: relative;
