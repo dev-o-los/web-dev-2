@@ -15,8 +15,16 @@ function animateAppBar() {
 }
 
 function scrolltoview() {
-  let div = document.getElementById("test");
-  div.scrollIntoView();
+  gsap.registerPlugin(ScrollToPlugin);
+
+  gsap.to(window, {
+    duration: 2,
+    scrollTo: {
+      y: "#target-div",
+      autoKill: true,
+    },
+    ease: "power2.inOut",
+  });
 }
 
 animateAppBar();
