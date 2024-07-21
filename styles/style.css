@@ -98,10 +98,12 @@ body {
   .logos {
     padding-top: 50px;
     justify-content: space-around;
+    max-width: fit-content;
+    margin-inline: auto;
   }
 
   img {
-    width: 30vw;
+    width: 27vw;
     max-width: 250px;
     object-fit: cover;
   }
