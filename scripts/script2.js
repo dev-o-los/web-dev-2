@@ -14,17 +14,8 @@ function animateAppBar() {
   });
 }
 
-function scrolltoview() {
-  gsap.registerPlugin(ScrollToPlugin);
-
-  gsap.to(window, {
-    duration: 2,
-    scrollTo: {
-      y: "#target-div",
-      autoKill: true,
-    },
-    ease: "power2.inOut",
-  });
+function scrolltoview(div_name) {
+  scroll.scrollTo(document.querySelector(div_name));
 }
 
 animateAppBar();

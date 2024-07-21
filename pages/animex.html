@@ -22,7 +22,6 @@
       href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
   </head>
   <body>
     <div class="onbx">
@@ -68,10 +67,10 @@
           </div>
         </div>
         <div class="btns">
-          <a href="https://project-51.pages.dev/"
-            ><button>about<i class="ri-arrow-right-up-line"></i></button
-          ></a>
-          <button onclick="scrolltoview()">
+          <button onclick="scrolltoview('#about')">
+            about<i class="ri-arrow-right-up-line"></i>
+          </button>
+          <button onclick="scrolltoview('#target-div')">
             View<i class="ri-arrow-right-up-line"></i>
           </button>
         </div>
@@ -88,7 +87,7 @@
         </div>
       </div>
       <br /><br />
-      <div class="about">
+      <div id="about" class="about">
         <h1>ABOUT</h1>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos
@@ -110,11 +109,14 @@
         <h2>------THE END------</h2>
       </div>
     </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
       defer
     ></script>
+    <!-- <script
+      src=" https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"
+      defer
+    ></script> -->
     <script
       src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"
       defer
