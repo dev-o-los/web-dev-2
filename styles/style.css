@@ -264,7 +264,7 @@ body {
   }
 
   .boundingelem {
-    width: calc(100dvw - 5vw);
+    width: calc(100dvw - 6vw);
     display: flex;
     align-items: center;
     justify-content: space-between;
