@@ -44,6 +44,7 @@ body {
 }
 
 .appbar h2 {
+  cursor: pointer;
   padding-top: 20px;
   font-family: "Sacramento", cursive;
   font-size: 8.5vmax;
