@@ -41,6 +41,16 @@ body {
   z-index: 99999;
   border-radius: 50%;
   visibility: hidden;
+
+  img {
+    cursor: pointer;
+    padding: 7px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .appbar h2 {

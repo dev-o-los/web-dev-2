@@ -19,23 +19,28 @@ function circleMouseFollower() {
     const follower = this.document.querySelector("#circle-follower");
     const x = dets.clientX,
       y = dets.clientY;
-    follower.style.transform = `translate(${x - 5}px , ${y - 5}px)`;
+    follower.style.left = "-5px";
+    follower.style.top = "-5px";
+    follower.style.transform = `translate(${x}px , ${y}px)`;
     musicButton(follower, x, y);
   });
 }
 
 function musicButton(follower, x, y) {
   const targetdiv = document.getElementById("music");
-  targetdiv.addEventListener("mouseover", () => {
-    follower.style.transform = `translate(${x - 19}px , ${y - 19}px)`;
-    follower.style.height = `40px`;
-    follower.style.width = `40px`;
-  });
-
-  targetdiv.addEventListener("mouseout", () => {
-    follower.style.transform = `translate(${x - 5}px , ${y - 5}px)`;
+  targetdiv.addEventListener("pointerleave", () => {
     follower.style.height = `10px`;
     follower.style.width = `10px`;
+  });
+  targetdiv.addEventListener("pointerenter", () => {
+    setTimeout(() => {
+      console.log("hello");
+      follower.style.left = "-19px";
+      follower.style.top = "-19px";
+    }, 150);
+
+    follower.style.width = `40px`;
+    follower.style.height = `40px`;
   });
 }
 
