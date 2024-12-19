@@ -16,11 +16,29 @@ function animateAppBar() {
 
 function circleMouseFollower() {
   window.addEventListener("mousemove", function (dets) {
-    this.document.querySelector(
-      "#circle-follower"
-    ).style.transform = `translate(${dets.pageX}px , ${dets.pageY}px)`;
+    const follower = this.document.querySelector("#circle-follower");
+    const x = dets.clientX,
+      y = dets.clientY;
+    follower.style.transform = `translate(${x - 5}px , ${y - 5}px)`;
+    musicButton(follower, x, y);
   });
 }
+
+function musicButton(follower, x, y) {
+  const targetdiv = document.getElementById("music");
+  targetdiv.addEventListener("mouseover", () => {
+    follower.style.transform = `translate(${x - 19}px , ${y - 19}px)`;
+    follower.style.height = `40px`;
+    follower.style.width = `40px`;
+  });
+
+  targetdiv.addEventListener("mouseout", () => {
+    follower.style.transform = `translate(${x - 5}px , ${y - 5}px)`;
+    follower.style.height = `10px`;
+    follower.style.width = `10px`;
+  });
+}
+
 function imageShow() {
   document.querySelectorAll(".pro").forEach(function (el) {
     var rot = 0;
@@ -46,7 +64,7 @@ function imageShow() {
   });
 
   document.querySelectorAll(".pro").forEach(function (el) {
-    el.addEventListener("mouseleave", function () {
+    el.addEventListener("mouseout", function () {
       if (el.querySelector(".view") != null) {
         gsap.to(el.querySelector(".view"), {
           opacity: 0,
