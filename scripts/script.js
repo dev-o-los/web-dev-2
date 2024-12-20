@@ -26,14 +26,26 @@ function circleMouseFollower() {
 function musicButton() {
   const targetdiv = document.getElementById("music");
   const follower = document.getElementById("circle-follower");
-  targetdiv.addEventListener("mouseleave", (dets) => {
+  targetdiv.addEventListener("mouseleave", () => {
     follower.style.height = `10px`;
     follower.style.width = `10px`;
     follower.style.marginTop = "-5px";
     follower.style.marginLeft = "-5px";
   });
 
-  targetdiv.addEventListener("mouseenter", (dets) => {
+  targetdiv.addEventListener("click", () => {
+    const audio = document.getElementById("song");
+    const playbtndiv = document.getElementById("play-btn-image");
+    if (audio.paused) {
+      audio.play();
+      playbtndiv.src = "https://www.svgrepo.com/show/522621/pause.svg";
+    } else {
+      playbtndiv.src = "https://www.svgrepo.com/show/529140/play-stream.svg";
+      audio.pause();
+    }
+  });
+
+  targetdiv.addEventListener("mouseenter", () => {
     follower.style.marginTop = `-19px`;
     follower.style.marginLeft = `-19px`;
     follower.style.width = `40px`;
