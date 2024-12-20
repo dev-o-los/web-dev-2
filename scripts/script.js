@@ -22,19 +22,22 @@ function circleMouseFollower() {
     follower.style.left = "-5px";
     follower.style.top = "-5px";
     follower.style.transform = `translate(${x}px , ${y}px)`;
-    musicButton(follower, x, y);
   });
 }
 
-function musicButton(follower, x, y) {
+function musicButton() {
+  const follower = document.getElementById("circle-follower");
   const targetdiv = document.getElementById("music");
-  targetdiv.addEventListener("pointerleave", () => {
+  targetdiv.addEventListener("mouseleave", (dets) => {
+    console.log(dets);
     follower.style.height = `10px`;
     follower.style.width = `10px`;
   });
-  targetdiv.addEventListener("pointerenter", () => {
+
+  targetdiv.addEventListener("mouseenter", (dets) => {
+    console.log(dets);
+
     setTimeout(() => {
-      console.log("hello");
       follower.style.left = "-19px";
       follower.style.top = "-19px";
     }, 150);
@@ -88,6 +91,7 @@ function imageShow() {
 imageShow();
 animateAppBar();
 circleMouseFollower();
+musicButton();
 
 function gsapanimate(selectorname, el, diff, dets, diffrot) {
   gsap.to(el.querySelector(selectorname), {
