@@ -35,8 +35,8 @@
       <div class="appbar">
         <div class="bounding">
           <div class="boundingelem">
-            <h2 id="logo" onclick="playPause()">utkarsh.dev</h2>
-            <audio id="song" src="idc.m4a"></audio>
+            <h2>utkarsh.dev</h2>
+            <audio loop id="song" src="idc.m4a"></audio>
           </div>
         </div>
       </div>
@@ -175,15 +175,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="scripts/script.js"></script>
-    <script>
-      function playPause() {
-        const audio = document.getElementById("song");
-        if (audio.paused) {
-          audio.play();
-        } else {
-          audio.pause();
-        }
-      }
-    </script>
   </body>
 </html>
