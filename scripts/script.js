@@ -36,6 +36,7 @@ function musicButton() {
   targetdiv.addEventListener("click", () => {
     const audio = document.getElementById("song");
     const playbtndiv = document.getElementById("play-btn-image");
+    const musicdiv = document.getElementById("music-on");
     const animation = playbtndiv.animate(
       [
         { transform: "rotate(0deg)", offset: 0 },
@@ -53,10 +54,12 @@ function musicButton() {
       audio.play();
       playbtndiv.src = "https://www.svgrepo.com/show/522621/pause.svg";
       animation.play();
+      musicdiv.style.display = "block";
     } else {
       animation.pause();
       playbtndiv.src = "https://www.svgrepo.com/show/529140/play-stream.svg";
       audio.pause();
+      musicdiv.style.display = "none";
     }
   });
 
