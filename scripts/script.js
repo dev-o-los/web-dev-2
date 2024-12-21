@@ -37,11 +37,24 @@ function musicButton() {
     const audio = document.getElementById("song");
     const playbtndiv = document.getElementById("play-btn-image");
     if (audio.paused) {
-      audio.play();
+      // audio.play();
       playbtndiv.src = "https://www.svgrepo.com/show/522621/pause.svg";
+      playbtndiv.animate(
+        [
+          { transform: "rotate(0deg)", offset: 0 },
+          { transform: "rotate(10deg)", offset: 0.25 },
+          { transform: "rotate(360deg)", offset: 0.5 },
+          { transform: "rotate(-10deg)", offset: 0.75 },
+          { transform: "rotate(0deg)", offset: 1 },
+        ],
+        {
+          duration: 2000,
+          iterations: Infinity,
+        }
+      );
     } else {
       playbtndiv.src = "https://www.svgrepo.com/show/529140/play-stream.svg";
-      audio.pause();
+      // audio.pause();
     }
   });
 
