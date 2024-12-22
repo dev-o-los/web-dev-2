@@ -1,4 +1,4 @@
-const scroll = new LocomotiveScroll({
+const locoscroll = new LocomotiveScroll({
   el: document.querySelector(".main"),
   smooth: true,
 });
@@ -55,6 +55,7 @@ function musicButton() {
       playbtndiv.src = "https://www.svgrepo.com/show/522621/pause.svg";
       animation.play();
       musicdiv.style.display = "block";
+      locoscroll.update();
     } else {
       animation.pause();
       playbtndiv.src = "https://www.svgrepo.com/show/529140/play-stream.svg";

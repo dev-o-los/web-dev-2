@@ -97,7 +97,7 @@ body {
     width: 5px;
     background-color: black;
     border-radius: 5px;
-    animation: xl 2s infinite;
+    animation: xl3 1s infinite;
   }
 
   .bars-l {
@@ -112,19 +112,43 @@ body {
     width: 5px;
     background-color: black;
     border-radius: 5px;
-    animation: xl 1.5s infinite;
+    animation: xl2 1s infinite;
   }
 }
 
 @keyframes xl {
   0% {
-    height: 26px;
+    height: 22px;
   }
   50% {
     height: 18px;
   }
   100% {
-    height: 26px;
+    height: 22px;
+  }
+}
+
+@keyframes xl3 {
+  0% {
+    height: 18px;
+  }
+  50% {
+    height: 27px;
+  }
+  100% {
+    height: 18px;
+  }
+}
+
+@keyframes xl2 {
+  0% {
+    height: 27px;
+  }
+  50% {
+    height: 18px;
+  }
+  100% {
+    height: 27px;
   }
 }
 
@@ -229,9 +253,6 @@ body {
 
 .socials {
   padding: 0 20px;
-  padding-top: 100px;
-  padding-bottom: 30px;
-
   .twitter i,
   .github i,
   .linkedin i {
