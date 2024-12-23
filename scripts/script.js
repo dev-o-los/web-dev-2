@@ -61,6 +61,7 @@ function musicButton() {
       playbtndiv.src = "https://www.svgrepo.com/show/529140/play-stream.svg";
       audio.pause();
       musicdiv.style.display = "none";
+      locoscroll.update();
     }
   });
 
