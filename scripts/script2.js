@@ -1,4 +1,4 @@
-const scroll = new LocomotiveScroll({
+const scrolll = new LocomotiveScroll({
   el: document.querySelector(".onbx"),
   smooth: true,
 });
@@ -17,5 +17,38 @@ function animateAppBar() {
 function scrolltoview(div_name) {
   scroll.scrollTo(document.querySelector(div_name));
 }
+
+function updateLocoscrollWhenImagesLoaded() {
+  const container = document.querySelector(".onbx");
+  if (!container) return;
+  const images = container.querySelectorAll("img");
+  let loaded = 0;
+  if (images.length === 0) {
+    if (scrolll && typeof scrolll.update === "function") scrolll.update();
+    return;
+  }
+  images.forEach((img) => {
+    if (img.complete) {
+      loaded++;
+      if (
+        loaded === images.length &&
+        scrolll &&
+        typeof scrolll.update === "function"
+      )
+        scrolll.update();
+    } else {
+      img.addEventListener("load", () => {
+        loaded++;
+        if (
+          loaded === images.length &&
+          scrolll &&
+          typeof scrolll.update === "function"
+        )
+          scrolll.update();
+      });
+    }
+  });
+}
+updateLocoscrollWhenImagesLoaded();
 
 animateAppBar();

@@ -15,7 +15,7 @@ function animateAppBar() {
 }
 
 function circleMouseFollower() {
-  window.addEventListener("mousemove", function (dets) {
+  addEventListener("mousemove", function (dets) {
     const follower = this.document.querySelector("#circle-follower");
     const x = dets.clientX,
       y = dets.clientY;
@@ -114,6 +114,40 @@ function imageShow() {
   });
 }
 
+function updateLocoscrollWhenImagesLoaded() {
+  const container = document.querySelector(".main");
+  if (!container) return;
+  const images = container.querySelectorAll("img");
+  let loaded = 0;
+  if (images.length === 0) {
+    if (locoscroll && typeof locoscroll.update === "function")
+      locoscroll.update();
+    return;
+  }
+  images.forEach((img) => {
+    if (img.complete) {
+      loaded++;
+      if (
+        loaded === images.length &&
+        locoscroll &&
+        typeof locoscroll.update === "function"
+      )
+        locoscroll.update();
+    } else {
+      img.addEventListener("load", () => {
+        loaded++;
+        if (
+          loaded === images.length &&
+          locoscroll &&
+          typeof locoscroll.update === "function"
+        )
+          locoscroll.update();
+      });
+    }
+  });
+}
+updateLocoscrollWhenImagesLoaded();
+
 imageShow();
 animateAppBar();
 circleMouseFollower();
@@ -128,3 +162,9 @@ function gsapanimate(selectorname, el, diff, dets, diffrot) {
     rotate: gsap.utils.clamp(-20, 20, diffrot * 0.8),
   });
 }
+
+addEventListener("load", () => {
+  if (locoscroll && typeof locoscroll.update === "function") {
+    locoscroll.update();
+  }
+});
