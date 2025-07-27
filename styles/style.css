@@ -417,8 +417,7 @@ button {
 
 button:hover {
   transition: cubic-bezier(0.19, 1, 0.22, 1);
-  transform: scale(1.1, 1.1) rotate(-2deg);
-  transition-duration: 1s;
+  transition-duration: 2s;
   overflow: hidden;
   border-style: none;
   background-color: white;
