@@ -562,3 +562,99 @@ button:hover {
     filter: invert();
   }
 }
+
+/* --- Power Effect Circular Animated Logos (Refined) --- */
+.logos {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 6%;
+  box-shadow: 0 0 30px 0 rgba(0, 255, 255, 0.07),
+    0 0 0 8px rgba(0, 255, 255, 0.03) inset;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #222 60%, #111 100%);
+  overflow: visible;
+}
+
+.logos img {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px #555454);
+  transition: filter 0.3s;
+  z-index: 2;
+}
+
+/* Arrange images in a circle using nth-child and trigonometry */
+.logos img:nth-child(1) {
+  --angle: 0deg;
+}
+.logos img:nth-child(2) {
+  --angle: 72deg;
+}
+.logos img:nth-child(3) {
+  --angle: 144deg;
+}
+.logos img:nth-child(4) {
+  --angle: 216deg;
+}
+.logos img:nth-child(5) {
+  --angle: 288deg;
+}
+
+.logos img {
+  left: 50%;
+  top: 50%;
+  transform: rotate(var(--angle)) translate(0, -180px)
+    rotate(calc(-1 * var(--angle)));
+  animation: orbit 7s linear infinite;
+  animation-delay: calc(var(--angle) * -0.03);
+}
+
+@keyframes orbit {
+  100% {
+    transform: rotate(calc(var(--angle) + 360deg)) translate(0, -180px)
+      rotate(calc(-1 * (var(--angle) + 360deg)));
+  }
+}
+
+/* Hover effect: only a subtle glow, no transform or scale */
+.logos img:hover {
+  filter: drop-shadow(0 0 18px #979797) drop-shadow(0 0 8px #fff8)
+    brightness(1.08);
+  z-index: 3;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .logos {
+    width: 240px;
+    height: 240px;
+    box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.07),
+      0 0 0 2px rgba(0, 255, 255, 0.03) inset;
+    right: 10dvw;
+  }
+  .logos img {
+    width: 84px;
+    height: 84px;
+    transform: rotate(var(--angle)) translate(0, -95px)
+      rotate(calc(-1 * var(--angle)));
+    animation: orbit-mobile 7s linear infinite;
+    padding: 6px;
+  }
+  @keyframes orbit-mobile {
+    100% {
+      transform: rotate(calc(var(--angle) + 360deg)) translate(0, -95px)
+        rotate(calc(-1 * (var(--angle) + 360deg)));
+    }
+  }
+  .logos img:hover {
+    filter: drop-shadow(0 0 12px #979797) drop-shadow(0 0 4px #fff8)
+      brightness(1.08);
+  }
+}
