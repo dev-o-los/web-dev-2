@@ -227,7 +227,7 @@ body {
       height: 300px;
       width: 350px;
       position: absolute;
-      object-fit: cover;
+      object-fit: contain;
       z-index: 999;
     }
 
