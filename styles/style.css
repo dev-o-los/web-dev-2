@@ -253,6 +253,7 @@ body {
 
 .socials {
   padding: 0 20px;
+  margin-top: 50px;
   .twitter i,
   .github i,
   .linkedin i {
