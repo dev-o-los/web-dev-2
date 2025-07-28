@@ -657,3 +657,72 @@ button:hover {
       brightness(1.08);
   }
 }
+
+/* --------------------------ALPHA OMEGA ----------------------------------------------------- */
+
+.alpha-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 40px 0;
+}
+
+.alpha-carousel {
+  display: flex;
+  animation: carousel-scroll 20s linear infinite;
+  width: fit-content;
+}
+
+.alpha-carousel img {
+  /* width: 90dvw; */
+  /* max-width: 400px; */
+  height: auto;
+  padding: 12px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alpha-carousel img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes carousel-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+  .alpha-carousel-container {
+    padding: 20px 0;
+  }
+
+  .alpha-carousel img {
+    width: 90dvw;
+    padding: 8px;
+  }
+
+  .alpha-carousel {
+    animation-duration: 15s;
+  }
+}
+
+/* Responsive design for desktop */
+@media (min-width: 670px) {
+  .alpha-carousel img {
+    width: 70dvw;
+    /* max-width: 500px; */
+    padding: 16px;
+  }
+
+  .alpha-carousel {
+    animation-duration: 25s;
+  }
+}
