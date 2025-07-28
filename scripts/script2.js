@@ -15,7 +15,7 @@ function animateAppBar() {
 }
 
 function scrolltoview(div_name) {
-  scroll.scrollTo(document.querySelector(div_name));
+  scrolll.scrollTo(document.querySelector(div_name));
 }
 
 function updateLocoscrollWhenImagesLoaded() {

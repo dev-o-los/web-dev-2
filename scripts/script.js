@@ -162,9 +162,3 @@ function gsapanimate(selectorname, el, diff, dets, diffrot) {
     rotate: gsap.utils.clamp(-20, 20, diffrot * 0.8),
   });
 }
-
-addEventListener("load", () => {
-  if (locoscroll && typeof locoscroll.update === "function") {
-    locoscroll.update();
-  }
-});
