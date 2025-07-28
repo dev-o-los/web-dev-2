@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>utkarsh.dev</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/loco.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+  </head>
+  <body>
+    <div class="onbx">
+      <div class="first-line-ace">
+        <div class="bounding">
+          <div class="boundingelem">
+            <h1>STOREX</h1>
+            <div class="appicon">
+              <img src="../assets/storex-logo.ico" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="manage">
+        <div class="bounding">
+          <div class="boundingelem">
+            <h1>Curated</h1>
+            <p>2024</p>
+          </div>
+        </div>
+      </div>
+      <div class="row1-wrapper">
+        <div class="row1">
+          <div class="bounding">
+            <div class="boundingelem">
+              <h1>Styles</h1>
+            </div>
+          </div>
+          <div class="bounding">
+            <div class="boundingelem">
+              <h1>Crafted</h1>
+            </div>
+          </div>
+          <div class="bounding">
+            <div class="boundingelem">
+              <h1>for</h1>
+            </div>
+          </div>
+          <div id="schedule" class="bounding">
+            <div class="boundingelem">
+              <h1>You</h1>
+            </div>
+          </div>
+        </div>
+        <div class="btns">
+          <a target="_blank" href="https://storex.pages.dev/"
+            ><button>Visit<i class="ri-arrow-right-up-line"></i></button
+          ></a>
+          <button onclick="scrolltoview('#target-div')">
+            View<i class="ri-arrow-right-up-line"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Video Container with Glowing Effect -->
+      <div class="video-container">
+        <div class="video-glow-effect"></div>
+        <div class="video-wrapper">
+          <video
+            src="../assets/storex-vid.mp4"
+            controls
+            autoplay
+            muted
+            loop
+            class="alpha-video"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <br /><br />
+      <div id="about" class="about">
+        <h1>ABOUT</h1>
+        <p>
+          <b>AlphaOmega: A Minimal Space for Meaningful Expression</b> <br />
+          <br />
+          AlphaOmega is a modern social media app I built with the vision of
+          creating a peaceful, distraction-free space for people to share
+          thoughts, moments, and visuals — without the noise of likes, follows,
+          or endless scrolling. It’s where minimalism meets expression, allowing
+          users to post postcards — elegant image-caption pairs that focus on
+          what matters.<br />
+          <br />
+          The idea for AlphaOmega came from my desire to build something
+          different. In a world full of overwhelming feeds and empty engagement
+          metrics, I wanted to craft a platform that felt calm, intentional, and
+          personal. I designed and developed the entire experience using React +
+          Vite, with Firebase powering the backend and Jotai handling state
+          management. From user authentication to scalable subcollection-based
+          data structures, every part of the app was built to support
+          performance, privacy, and simplicity.
+          <br />
+          <br />
+          This project wasn’t just a test of technical skills — it was a journey
+          in UI/UX thinking, product design, and reimagining how digital spaces
+          can feel. AlphaOmega reflects my passion for clean design, thoughtful
+          development, and building software that actually adds value to
+          people’s lives.
+        </p>
+      </div>
+
+      <div class="the-end">
+        <h2>------THE END------</h2>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script src="../scripts/script2.js" defer></script>
+  </body>
+</html>
