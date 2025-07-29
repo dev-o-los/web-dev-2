@@ -657,6 +657,10 @@ button:hover {
     filter: drop-shadow(0 0 12px #979797) drop-shadow(0 0 4px #fff8)
       brightness(1.08);
   }
+
+  .techstack {
+    display: none;
+  }
 }
 
 /* --------------------------ALPHA OMEGA ----------------------------------------------------- */
