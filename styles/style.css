@@ -825,3 +825,14 @@ button:hover {
     width: 90dvw;
   }
 }
+
+/* Disable hover effects for project section on touch/mobile devices */
+@media (hover: none) and (pointer: coarse) {
+  .projects .pro img:hover,
+  .projects .pro .view:hover,
+  .projects .pro:hover img,
+  .projects .pro:hover .view {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
