@@ -76,7 +76,7 @@ body {
   }
 }
 
-#music-on {
+/* #music-on {
   height: 45px;
   width: 45px;
   border-radius: 100%;
@@ -114,7 +114,7 @@ body {
     border-radius: 5px;
     animation: xl2 1s infinite;
   }
-}
+} */
 
 @keyframes xl {
   0% {
